@@ -132,3 +132,25 @@
       margin-top: 15px;
       text-align: center;
     }
+ @media(max-width:768px){
+      .left-panel{
+        display: none;
+      }
+      .right-panel{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+      }
+      .main-container{
+        flex-direction: column;
+      }
+
+      
+    }
+        @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+      }
+
