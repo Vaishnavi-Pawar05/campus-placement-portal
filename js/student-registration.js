@@ -126,3 +126,23 @@ document.querySelectorAll('.nav-links a,.mobile-menu a').forEach(function(a){
     document.getElementById('hamburger').classList.remove('open');
   });
 });
+
+function registerStudent(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let course = document.getElementById("course").value;
+
+let student = {
+name:name,
+email:email,
+course:course
+};
+
+localStorage.setItem("studentData", JSON.stringify(student));
+
+alert("Registration Successful!");
+
+window.location.href="student-dashboard.html";
+
+}

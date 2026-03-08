@@ -323,3 +323,14 @@ document.querySelectorAll('.nav-links a,.mobile-menu a').forEach(function(a){
     document.getElementById('hamburger').classList.remove('open');
   });
 });
+
+
+let student = JSON.parse(localStorage.getItem("studentData"));
+
+if(student){
+
+document.getElementById("studentName").innerText = student.name;
+document.getElementById("studentEmail").innerText = student.email;
+document.getElementById("studentCourse").innerText = student.course;
+
+}
