@@ -77,7 +77,9 @@ Information about the placement cell and system purpose.
 Shows contact details of the placement department.
 
 ---
-![Uploading image.png…]()
+<img width="1869" height="876" alt="image" src="https://github.com/user-attachments/assets/02e73bab-97ab-453f-8668-2533c3e3bef5" />
+
+
 
 ## 🗂 Folder Structure
 
