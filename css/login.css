@@ -36,13 +36,11 @@
    gap: 25px;
    align-items: center;
  }
-
  .nav-item {
    text-decoration: none;
    color: black;
    font-size: 17px;
  }
-
  .btn {
    padding: 6px 18px;
    border-radius: 20px;
@@ -51,13 +49,11 @@
    color: white;
    cursor: pointer;
  }
-
  .hamburger-icon {
    height: 30px;
    display: none;
    cursor: pointer;
  }
-
  .main-container {
    width: 800px;
    height: 430px;
@@ -68,7 +64,6 @@
    overflow: hidden;
    box-shadow: 0 15px 35px rgba(127, 85, 57, 0.25);
  }
-
  .left-panel {
    width: 50%;
    background: linear-gradient(135deg, #c9a27e, #b08968);
@@ -78,7 +73,6 @@
    flex-direction: column;
    justify-content: center;
  }
-
  .right-panel {
    width: 50%;
    padding: 45px;
@@ -87,13 +81,11 @@
    flex-direction: column;
    justify-content: center;
  }
-
  form {
    display: flex;
    flex-direction: column;
    gap: 14px;
  }
-
  input {
    width: 100%;
    padding: 12px 42px 12px 12px;
@@ -101,11 +93,9 @@
    border: 1px solid #ddb892;
    background: #fefae0;
  }
-
  .password-box {
    position: relative;
  }
-
  .password-box span {
    position: absolute;
    right: 12px;
@@ -113,7 +103,6 @@
    transform: translateY(-50%);
    cursor: pointer;
  }
-
  button[type="submit"] {
    padding: 12px;
    background: #994a00;
@@ -122,28 +111,23 @@
    border-radius: 8px;
    cursor: pointer;
  }
-
  .switch-text {
    margin-top: 15px;
    text-align: center;
  }
-
  @media(max-width:768px) {
    .left-panel {
      display: none;
    }
-
    .right-panel {
      width: 100%;
      padding: 30px;
      text-align: center;
    }
-
    .main-container {
      flex-direction: column;
    }
  }
-
  @media (max-width: 900px) {
    .main-container {
      flex-direction: column;
