@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/login.css">
+      <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-     <div class="main-container">
+<header class="navbar">
+<div class="logo">
+<span class="dot">•</span> CampusHire
+</div>
+<nav class="menu">
+<a href="../index.html">Home</a>
+<a href="../pages/job-listing.html">Jobs</a>
+<a href="../pages/Application-status.html">Applications</a>
+<a href="../pages/student-dashboard.html">Dashboard</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/contact.html">Contact</a>
+<a href="../pages/login.html">Login</a>
+<a href="../pages/student-registration.html" class="register">Register</a>
+</nav>
+</header>
+  <div class="main-container">
     <div class="left-panel">
-      <h1>Welcome Back ☕</h1>
-      <p>placement.</p>
+      <img src="   ">
+      <h1>Welcome to Campus Placement Portal📝</h1>
+      <p>One Click, Infinite Opportunities.</p>
     </div>
-
     <div class="right-panel">
       <h2>User Login</h2>
-
       <form>
+        <input type="name" placeholder="👤Name" required>
         <input type="email" placeholder="📧 Email" required>
-
         <div class="password-box">
           <input type="password" id="loginPass" placeholder="🔒 Password" required>
           <span onclick="togglePassword('loginPass')">👁️</span>
         </div>
-
         <button type="submit">Login</button>
       </form>
-
       <p class="switch-text">
         Don’t have an account?
-        <a href="signup.html">Create Account</a>
+        <a href="student-registration.html">Create Account</a>
       </p>
     </div>
   </div>
-  
+  <script src="../js/login.js"></script>
+ <footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="footer-brand-dot"></span>CampusHire
+      </div>
+      <p class="footer-desc">India's leading campus placement platform connecting students to top recruiters.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Platform</div>
+      <a href="../pages/job-listing.html">Browse Jobs</a>
+      <a href="../pages/Application-status.html">Applications</a>
+      <a href="../pages/student-dashboard.html">Dashboard</a>
+      <a href="../pages/student-registration.html">Register</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/student-registration.html">register</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Support</div>
+      <a href="https://www.instagram.com/?hl=en">Instagram</a>
+      <a href="https://www.facebook.com/">facebook</a>
+      <a href="https://x.com/">Twitter</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CampusHire. All rights reserved.</span>
+    <span>Made with ❤️ for Indian students</span>
+  </div>
+</footer>
 </body>
 </html>
