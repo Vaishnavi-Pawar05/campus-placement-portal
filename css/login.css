@@ -11,7 +11,7 @@
 }
 :root {
     /* Cream */
-    --cream: #F5F0E8;
+    --cream: #e5e0d7;
     --cream2: #EDE7D9;
     --cream3: #E2D9C8;
     --white: #FFFDF8;
@@ -46,19 +46,6 @@ body {
     color: var(--ink);
     min-height: 100vh;
     overflow-x: hidden
-}
-
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cream2)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 10px
 }
 
 /* ══════ NAVBAR ══════ */
@@ -206,7 +193,7 @@ margin:8px 0;
  }
  body {
    min-height: 100vh;
-   background-color: #ffffff;
+   background-color: #ebe9dc;
  }
  .app-title {
    background: #ffffff;

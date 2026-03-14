@@ -12,10 +12,10 @@
 
 :root {
     /* Cream */
-    --cream: #F5F0E8;
-    --cream2: #EDE7D9;
-    --cream3: #E2D9C8;
-    --white: #FFFDF8;
+    --cream: #ece9e4;
+    --cream2: #eae8e1;
+    --cream3: #ede7dc;
+    --white: #eae6dd;
     /* Black */
     --ink: #1A1208;
     --ink2: #3D2E18;
@@ -48,22 +48,9 @@ body {
     background: var(--cream);
     color: var(--ink);
     min-height: 100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-color: #f2eee7;
 }
-
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cream2)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 10px
-}
-
 /* ══════ NAVBAR ══════ */
 .navbar{
 display:flex;
@@ -229,7 +216,8 @@ body {
     background: var(--paper);
     color: var(--ink);
     min-height: 100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-color: #B0A08A;
 }
 
 ::-webkit-scrollbar {
@@ -248,9 +236,10 @@ body {
 
 /* ── MAIN ── */
 .main {
-    margin-top: 70px;
+    margin-top: 30px;
     min-height: 100vh;
-    padding: 2rem
+    padding: 2rem;
+    background-color: #f0ede6;
 }
 
 /* ── TOPBAR ── */
