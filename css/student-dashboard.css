@@ -12,10 +12,10 @@
 
 :root {
     /* Cream */
-    --cream: #F5F0E8;
-    --cream2: #EDE7D9;
-    --cream3: #E2D9C8;
-    --white: #FFFDF8;
+    --cream: #ece9e4;
+    --cream2: #eae8e1;
+    --cream3: #ede7dc;
+    --white: #eae6dd;
     /* Black */
     --ink: #1A1208;
     --ink2: #3D2E18;
@@ -48,94 +48,85 @@ body {
     background: var(--cream);
     color: var(--ink);
     min-height: 100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-color: #f2eee7;
 }
-
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cream2)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 10px
-}
-
 /* ══════ NAVBAR ══════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: rgba(255, 253, 248, 0.96);
-    backdrop-filter: blur(18px);
-    border-bottom: 1.5px solid var(--border);
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    gap: 1.5rem
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:black;
+color:white;
 }
 
-.nav-logo {
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    margin-right: auto;
-    text-decoration: none
+.logo{
+font-size:22px;
+font-weight:bold;
+color:white;
 }
 
-.nav-logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 8px var(--orange)
+.dot{
+color:#ff6a00;
+margin-right:6px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem
+/* MENU */
+
+.menu a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:15px;
+transition:0.3s;
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink2);
-    padding: 0.42rem 0.8rem;
-    border-radius: 8px;
-    transition: all 0.2s;
-    cursor: pointer
+.menu a:hover{
+color:#ff6a00;
 }
 
-.nav-links a:hover {
-    background: var(--orange-s);
-    color: var(--orange)
+/* REGISTER BUTTON */
+
+.register{
+background:#ff6a00;
+padding:6px 14px;
+border-radius:6px;
+}
+/* TABLET */
+
+@media (max-width:900px){
+
+.navbar{
+padding:15px 30px;
 }
 
-.nav-links a.active {
-    background: var(--orange-s);
-    color: var(--orange);
-    font-weight: 600
+.menu a{
+margin-left:15px;
+font-size:14px;
 }
 
-.nav-cta {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 0.8rem
 }
 
+/* MOBILE */
+
+@media (max-width:600px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu{
+margin-top:10px;
+}
+
+.menu a{
+display:block;
+margin:8px 0;
+}
+
+}
 .btn {
     display: inline-flex;
     align-items: center;
@@ -225,7 +216,8 @@ body {
     background: var(--paper);
     color: var(--ink);
     min-height: 100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-color: #B0A08A;
 }
 
 ::-webkit-scrollbar {
@@ -244,9 +236,10 @@ body {
 
 /* ── MAIN ── */
 .main {
-    margin-top: 70px;
+    margin-top: 30px;
     min-height: 100vh;
-    padding: 2rem
+    padding: 2rem;
+    background-color: #f0ede6;
 }
 
 /* ── TOPBAR ── */
@@ -329,6 +322,21 @@ body {
     border-radius: 50%;
     border: 2px solid #fff
 }
+@media (max-width: 768px){
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a{
+        padding: 8px 0;
+    }
+
+}
+
+
 
 /* ── STAT CARDS ── */
 .stats-row {
@@ -1259,7 +1267,8 @@ form-section {
     background: var(--ink);
     color: white;
     padding: 2.8rem 2rem 1.8rem;
-    font-family: 'Bricolage Grotesque', sans-serif
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size:large;
 }
 
 .footer-inner {
