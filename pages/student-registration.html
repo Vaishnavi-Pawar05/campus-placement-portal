@@ -197,8 +197,8 @@
                     </div>
                     <div class="form-nav">
                         <button class="btn-back" onclick="prevStep(3)">Back</button>
-                        <a href="student-dashboard.html"><button class="btn-submit" onclick="registerStudent()">Create
-                                Account</button></a>
+                        <button class="btn-submit" onclick="registerStudent()">Create
+                                Account</button>
                     </div>
                 </div>
 
@@ -250,6 +250,53 @@
             <span>Made with ❤️ for Indian students</span>
         </div>
     </footer>
+    <script>
+  let currentStep = 1;
+
+function nextStep(step) {
+    document.getElementById("panel" + step).classList.remove("active");
+    document.getElementById("panel" + (step + 1)).classList.add("active");
+    currentStep = step + 1;
+}
+
+function prevStep(step) {
+    document.getElementById("panel" + step).classList.remove("active");
+    document.getElementById("panel" + (step - 1)).classList.add("active");
+    currentStep = step - 1;
+}
+
+function registerStudent() {
+
+    let studentData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        phone: document.getElementById("phone").value,
+        city: document.getElementById("city").value,
+
+        college: document.getElementById("college").value,
+        branch: document.getElementById("branch").value,
+        passYear: document.getElementById("passYear").value,
+
+        cgpa: document.getElementById("cgpa").value,
+        tenth: document.getElementById("tenth").value,
+        twelfth: document.getElementById("twelfth").value,
+
+        skills: document.getElementById("skills").value,
+        linkedin: document.getElementById("linkedin").value,
+
+        email: document.getElementById("email").value,
+        about: document.getElementById("about").value
+    };
+
+    // save in localStorage
+    localStorage.setItem("studentProfile", JSON.stringify(studentData));
+
+    alert("Registration Successful!");
+
+    // redirect dashboard
+    window.location.href = "student-dashboard.html";
+}
+</script>
 </body>
 
 </html>

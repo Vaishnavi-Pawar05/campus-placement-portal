@@ -362,3 +362,52 @@ window.onload = function(){
   }
 
 }
+window.onload = function () {
+
+    let data = JSON.parse(localStorage.getItem("studentProfile"));
+
+    if (!data) return;
+
+    // Greeting
+    document.getElementById("greetingName").innerText =
+        "Welcome " + data.firstName + " 👋";
+
+    // Profile name
+    document.getElementById("profileName").innerText =
+        data.firstName + " " + data.lastName;
+
+    // Sub text
+    document.getElementById("profileSub").innerText =
+        data.branch + " • " + data.college;
+
+    // Avatar first letter
+    document.getElementById("profileAvatar").innerText =
+        data.firstName.charAt(0);
+
+    // CGPA
+    if (data.cgpa) {
+        document.getElementById("statCgpa").innerText = data.cgpa;
+        document.getElementById("ringVal").innerText = data.cgpa;
+        document.getElementById("acCgpa").innerText = data.cgpa;
+    }
+
+    // 10th & 12th
+    document.getElementById("ac10th").innerText = data.tenth || "—";
+    document.getElementById("ac12th").innerText = data.twelfth || "—";
+
+    // Branch
+    document.getElementById("acBranch").innerText = data.branch || "—";
+
+    // Skills
+    if (data.skills) {
+
+        let skills = data.skills.split(",");
+        let skillHTML = "";
+
+        skills.forEach(skill => {
+            skillHTML += `<span class="ptag">${skill.trim()}</span>`;
+        });
+
+        document.getElementById("profileSkills").innerHTML = skillHTML;
+    }
+};
