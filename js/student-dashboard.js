@@ -362,3 +362,102 @@ window.onload = function(){
   }
 
 }
+window.onload = function () {
+
+    let data = JSON.parse(localStorage.getItem("studentProfile"));
+
+    if (!data) return;
+
+    // Greeting
+    document.getElementById("greetingName").innerText =
+        "Welcome " + data.firstName + " 👋";
+
+    // Profile name
+    document.getElementById("profileName").innerText =
+        data.firstName + " " + data.lastName;
+
+    // Sub text
+    document.getElementById("profileSub").innerText =
+        data.branch + " • " + data.college;
+
+    // Avatar first letter
+    document.getElementById("profileAvatar").innerText =
+        data.firstName.charAt(0);
+
+    // CGPA
+    if (data.cgpa) {
+        document.getElementById("statCgpa").innerText = data.cgpa;
+        document.getElementById("ringVal").innerText = data.cgpa;
+        document.getElementById("acCgpa").innerText = data.cgpa;
+    }
+
+    // 10th & 12th
+    document.getElementById("ac10th").innerText = data.tenth || "—";
+    document.getElementById("ac12th").innerText = data.twelfth || "—";
+
+    // Branch
+    document.getElementById("acBranch").innerText = data.branch || "—";
+
+    // Skills
+    if (data.skills) {
+
+        let skills = data.skills.split(",");
+        let skillHTML = "";
+
+        skills.forEach(skill => {
+            skillHTML += `<span class="ptag">${skill.trim()}</span>`;
+        });
+
+        document.getElementById("profileSkills").innerHTML = skillHTML;
+    }
+};
+
+window.onload = function () {
+
+let student = JSON.parse(localStorage.getItem("studentData"));
+
+if(student == null){
+return;
+}
+
+// Greeting
+document.getElementById("greetingName").innerText =
+"Welcome " + student.firstName + " 👋";
+
+// Profile Name
+document.getElementById("profileName").innerText =
+student.firstName + " " + student.lastName;
+
+// Branch + College
+document.getElementById("profileSub").innerText =
+student.branch + " • " + student.college;
+
+// CGPA
+document.getElementById("statCgpa").innerText = student.cgpa;
+document.getElementById("ringVal").innerText = student.cgpa;
+document.getElementById("acCgpa").innerText = student.cgpa;
+
+// 10th
+document.getElementById("ac10th").innerText = student.tenth;
+
+// 12th
+document.getElementById("ac12th").innerText = student.twelfth;
+
+// Branch
+document.getElementById("acBranch").innerText = student.branch;
+
+// Skills
+if(student.skills){
+
+let skills = student.skills.split(",");
+let html = "";
+
+skills.forEach(skill=>{
+html += `<span class="ptag">${skill.trim()}</span>`;
+});
+
+document.getElementById("profileSkills").innerHTML = html;
+
+}
+
+};

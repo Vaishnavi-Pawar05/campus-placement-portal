@@ -9,10 +9,9 @@
     margin: 0;
     padding: 0
 }
-
 :root {
     /* Cream */
-    --cream: #F5F0E8;
+    --cream: #e5e0d7;
     --cream2: #EDE7D9;
     --cream3: #E2D9C8;
     --white: #FFFDF8;
@@ -38,11 +37,9 @@
     --border: #DDD3C2;
     --border2: #C8BB9F;
 }
-
 html {
     scroll-behavior: smooth
 }
-
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
     background: var(--cream);
@@ -51,91 +48,82 @@ body {
     overflow-x: hidden
 }
 
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cream2)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 10px
-}
-
 /* ══════ NAVBAR ══════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: rgba(255, 253, 248, 0.96);
-    backdrop-filter: blur(18px);
-    border-bottom: 1.5px solid var(--border);
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    gap: 1.5rem
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:black;
+color:white;
 }
 
-.nav-logo {
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    margin-right: auto;
-    text-decoration: none
+.logo{
+font-size:22px;
+font-weight:bold;
+color:white;
 }
 
-.nav-logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 8px var(--orange)
+.dot{
+color:#ff6a00;
+margin-right:6px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem
+/* MENU */
+
+.menu a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:15px;
+transition:0.3s;
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink2);
-    padding: 0.42rem 0.8rem;
-    border-radius: 8px;
-    transition: all 0.2s;
-    cursor: pointer
+.menu a:hover{
+color:#ff6a00;
 }
 
-.nav-links a:hover {
-    background: var(--orange-s);
-    color: var(--orange)
+/* REGISTER BUTTON */
+
+.register{
+background:#ff6a00;
+padding:6px 14px;
+border-radius:6px;
+}
+/* TABLET */
+
+@media (max-width:900px){
+
+.navbar{
+padding:15px 30px;
 }
 
-.nav-links a.active {
-    background: var(--orange-s);
-    color: var(--orange);
-    font-weight: 600
+.menu a{
+margin-left:15px;
+font-size:14px;
 }
 
-.nav-cta {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 0.8rem
 }
 
+/* MOBILE */
+
+@media (max-width:600px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu{
+margin-top:10px;
+}
+
+.menu a{
+display:block;
+margin:8px 0;
+}
+
+}
 /* ══════ BUTTONS ══════ */
 .btn {
     display: inline-flex;
@@ -205,7 +193,7 @@ body {
  }
  body {
    min-height: 100vh;
-   background-color: #ffe4cc;
+   background-color: #ebe9dc;
  }
  .app-title {
    background: #ffffff;
@@ -333,22 +321,17 @@ body {
      height: auto;
    }
  }
-
-
- 
 * FOOTER CSS */:root {
     --ink: #1A1208;
     --orange: #E8650A;
     --border: #DDD3C2;
 }
-
 .footer {
     background: var(--ink);
     color: white;
     padding: 2.8rem 2rem 1.8rem;
     font-family: 'Bricolage Grotesque', sans-serif
 }
-
 .footer-inner {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
@@ -356,7 +339,6 @@ body {
     max-width: 900px;
     margin: 0 auto 2rem
 }
-
 .footer-brand {
     font-family: 'Clash Display', sans-serif;
     font-weight: 700;
@@ -367,20 +349,17 @@ body {
     gap: 0.4rem;
     margin-bottom: 0.6rem
 }
-
 .footer-brand-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background: var(--orange)
 }
-
 .footer-desc {
     font-size: 0.79rem;
     line-height: 1.7;
     color: white;
 }
-
 .footer-col-title {
     font-size: 0.64rem;
     font-weight: 700;
@@ -389,7 +368,6 @@ body {
     color:white;
     margin-bottom: 0.7rem
 }
-
 .footer-col a {
     display: block;
     font-size: 0.8rem;
@@ -399,11 +377,9 @@ body {
     text-decoration: none;
     cursor: pointer
 }
-
 .footer-col a:hover {
     color: var(--orange)
 }
-
 .footer-bottom {
     max-width: 900px;
     margin: 0 auto;
@@ -415,13 +391,11 @@ body {
     flex-wrap: wrap;
     gap: 0.4rem
 }
-
 @media(max-width:700px) {
     .footer-inner {
         grid-template-columns: 1fr 1fr
     }
 }
-
 @media(max-width:450px) {
     .footer-inner {
         grid-template-columns: 1fr
